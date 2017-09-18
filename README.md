@@ -19,3 +19,8 @@ Tests can be run the the below command
 #### Contribution or Questions
 Please feel free to DM me.
 
+#### Donations
+Please feel free to donate as this work done involves years of efforts and money spent to obtain the college degree and experience gained to write quality software
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZKRHDCLG22EJA)
+

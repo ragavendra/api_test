@@ -4,7 +4,8 @@ env/
 .\#*
 .\#
 .bundle
-
+target/
+*.swp
 
 # RubyMine
 .idea/

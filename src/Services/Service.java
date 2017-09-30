@@ -21,6 +21,9 @@ class Service implements PostCalls {
 		
 		//Perform POST call
 		response = sendPostRequest(requestUrl, payload);
+
+		//return response
+		return response;
 	}
 
 }

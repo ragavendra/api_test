@@ -1,9 +1,10 @@
-class BaseService implements PostCalls {
+class BaseService extends PostCalls {
 
 	public static String args;
 
 	//constructor
-	public String BaseService( String args_sent ) {
+	public BaseService( String args_sent ) {
+		//super("hellohi");
 		args = args_sent;	
 	}
 			
@@ -20,10 +21,10 @@ class BaseService implements PostCalls {
 		PostCalls response = new PostCalls();
 		
 		//Perform POST call
-		response = response.sendPostRequest(requestUrl, payload);
+		String resp = response.sendPostRequest(requestUrl, requestBody);
 
 		//return response
-		return response;
+		return resp.toString();
 	}
 
 }

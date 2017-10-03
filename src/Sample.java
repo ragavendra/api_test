@@ -2,24 +2,10 @@ import java.net.URL;
 import java.net.HttpURLConnection;
 //import java.io.OutputStreamWriter;
 import java.io.*;
-import java.util.*;
-import java.net.*;
+//import java.util.*;
+//import java.lang.Object;
 
-public class PostCalls {
-
-	public static String options, pollingPath, resourcePath, protocol, host, port;
-/*
-	public PostCalls(String opts) {
-		options = opts;
-		pollingPath = "";     
-		resourcePath = "";     
-		protocol = "";
-		host = "";
-		port = "";
-		//@httpClient = HttpClient.new
-		}
-*/	  
-	//POST action
+public class Sample {
 	public static String sendPostRequest(String requestUrl, String payload) {
 		try {
 			URL url = new URL(requestUrl);
@@ -45,19 +31,15 @@ public class PostCalls {
 			throw new RuntimeException(e.getMessage());
 		}
 		//return jsonString.toString();
+		//return jsonString.toString();
 		return "Hello";
 	}
 
-	  public String URL() {
-		  return GetPathPrefix() + resourcePath; 
-	  }
-	  
-	  public String GetPollingPath() {
-		  return GetPathPrefix() + pollingPath;
-	  }
-		  
-	  public String GetPathPrefix() {
-		  //return @opts[:protocol] + '://' + @opts[:host] + ':' + @opts[:port]
-		  return (protocol + "://" + host + ":" + port);
-	  }
+	public static void main (String[] args) {
+	
+		//escape the double quotes in json string
+		String payload="{\"jsonrpc\":\"2.0\",\"method\":\"changeDetail\",\"params\":[{\"id\":11376}],\"id\":2}";
+		String requestUrl="https://git.eclipse.org/r/gerrit/rpc/ChangeDetailService";
+		sendPostRequest(requestUrl, payload);
+	}
 }
